@@ -52,6 +52,7 @@ Ces deux informations sont combinées pour construire l'URL de recherche Google.
 6. **Suppression des doublons** : Les doublons sont supprimés en se basant sur la colonne `Nom` au cas où un utilisateur ai eu un bug et ai mis deux fois le même avis ou note.
 7. **Export des données** :
    - Les données sont sauvegardées dans un fichier CSV nommé `<Nom_Entreprise>_<Ville>.csv` dans le dossier `./Comments`.
+   - Le script pouvant mettre du temps à tourner, il faudra attendre que le terminal indique "x commentaires enregistrés dans comments.csv" sans l'intérompre. x étant le nombre de données scrappées. 
 
 ---
 
