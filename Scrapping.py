@@ -154,7 +154,8 @@ def scroll_and_scrape(driver, trigger_class, item_class, link_class, review_clas
     # Étape 4 : Scraper les données des éléments restants
     print("Scraping the visible elements...")
     # Utiliser XPath pour cibler les enfants de GmP9w ayant la classe item_class
-    items = driver.find_elements(By.XPATH, "//div[contains(@class, 'EfDVh wDYxhc NFQFxe viOShc')]//div[contains(@class, 'bwb7ce')]")
+    items = driver.find_elements(By.XPATH, "//div[contains(@class, 'bwb7ce')]")
+    # items = driver.find_elements(By.XPATH, "//div[contains(@class, 'EfDVh wDYxhc NFQFxe viOShc')]//div[contains(@class, 'bwb7ce')]")
 
     item_count = len(items)
     print(f"Nombre d'éléments avec la classe '{item_class}' trouvés : {item_count}")
@@ -283,7 +284,8 @@ try:
     # Scraper les données
     all_data = scroll_and_scrape(
         driver,
-        trigger_class="immersive-container",
+        # trigger_class="immersive-container",
+        trigger_class="bwb7ce",
         item_class="bwb7ce",
         link_class="MtCSLb",
         review_class="OA1nbd",
